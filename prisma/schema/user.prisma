@@ -1,0 +1,11 @@
+model user {
+    Id Int  @id @default(autoincrement())
+    FirstName String
+    LastName String
+    UserName String @unique
+    Email String
+    Password String
+    IsActive Boolean @default(true)
+    CreatedAt DateTime @default(now()) @db.Timestamptz(6)
+    UpdatedAt DateTime @updatedAt @db.Timestamptz(6)
+}
